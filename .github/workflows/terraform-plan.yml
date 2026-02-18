@@ -1,8 +1,19 @@
+
 name: Terraform Plan
 
 on:
-  pull_request:
+  push:
     branches: [ main ]
+    paths:
+      - 'infra/**'
+      - '.github/workflows/**'
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
 
 env:
   TF_WORKING_DIR: infra
