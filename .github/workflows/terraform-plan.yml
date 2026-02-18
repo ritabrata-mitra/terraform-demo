@@ -6,7 +6,7 @@ on:
     branches: [ main ]
     paths:
       - 'infra/**'
-      - '.github/workflows/**'
+
   workflow_dispatch: {}
 
 permissions:
